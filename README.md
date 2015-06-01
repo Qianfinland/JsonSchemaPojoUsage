@@ -1,38 +1,8 @@
-This is an example of how to create a JSON Schema from a POJO.  
+In this project i try to generate JSON Schema from a Pojo and Generate the Pojo to JSON Schema.
 
-This example will generate this schema:
-```json
-{
-  "type" : "object",
-  "id" : "urn:jsonschema:com:bmchild:model:SimplePojo",
-  "properties" : {
-    "children" : {
-      "type" : "array",
-      "items" : {
-        "type" : "object",
-        "id" : "urn:jsonschema:com:bmchild:model:SimplePojoChild",
-        "properties" : {
-          "cName" : {
-            "type" : "string"
-          },
-          "id" : {
-            "type" : "integer"
-          },
-          "cDescription" : {
-            "type" : "string"
-          }
-        }
-      }
-    },
-    "name" : {
-      "type" : "string"
-    },
-    "description" : {
-      "type" : "string"
-    },
-    "id" : {
-      "type" : "integer"
-    }
-  }
-}
-```
+Step 1 : Generate JSON Schema from Pojo
+Refer to this repo https://github.com/bmchild/JsonSchemaGen
+The generated schema example can be found in the schema.txt file . 
+
+
+Step 2: Generate Pojo to JSON Schema
