@@ -1,6 +1,7 @@
 In this project i try to generate JSON Schema from a Pojo and Generate the Pojo to JSON Schema.
 
 Step 1 : Generate JSON Schema from Pojo
+
 Refer to this repo https://github.com/bmchild/JsonSchemaGen
 
 The generated schema example can be found in the schema.txt file . 

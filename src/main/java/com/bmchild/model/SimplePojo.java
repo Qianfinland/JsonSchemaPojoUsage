@@ -1,13 +1,13 @@
 package com.bmchild.model;
 
-import java.util.List;
+//import java.util.List;
 
 public class SimplePojo {
 
 	private Integer id;
 	private String name;
 	private String description;
-	private List<SimplePojoChild> children;
+	//private List<SimplePojoChild> children;
 	public Integer getId() {
 		return id;
 	}
@@ -26,11 +26,11 @@ public class SimplePojo {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public List<SimplePojoChild> getChildren() {
-		return children;
-	}
-	public void setChildren(List<SimplePojoChild> children) {
-		this.children = children;
-	}
+//	public List<SimplePojoChild> getChildren() {
+//		return children;
+//	}
+//	public void setChildren(List<SimplePojoChild> children) {
+//		this.children = children;
+//	}
 	
 }
