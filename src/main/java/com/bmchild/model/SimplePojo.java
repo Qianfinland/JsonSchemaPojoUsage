@@ -7,7 +7,7 @@ public class SimplePojo {
 	private Integer id;
 	private String name;
 	private String description;
-	//private List<SimplePojoChild> children;
+//	private List<SimplePojoChild> children;
 	public Integer getId() {
 		return id;
 	}

@@ -1,16 +1,21 @@
 package com.bmchild.model;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
+import java.net.URL;
+
+import org.jsonschema2pojo.SchemaMapper;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonMappingException;
+//import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.module.jsonSchema.JsonSchema;
 import com.fasterxml.jackson.module.jsonSchema.factories.SchemaFactoryWrapper;
+import com.sun.codemodel.JCodeModel;
 
 public class JsonSchemaGenerator {
 
@@ -48,9 +53,15 @@ public class JsonSchemaGenerator {
       writer.close();
 	}
 	
-	static void FromSchemaToPojo() 
+	static void FromSchemaToPojo() throws IOException 
 	{
-		System.out.println("Create the pojo file!");
+		System.out.println("Create the pojo file successfully!");
+		JCodeModel codeModel = new JCodeModel();
+		URL source = new URL("file:///C:/git/PojoSchema/JsonSchemaGen/schema.txt");
+		new SchemaMapper().generate(codeModel, "SimplePojo", "com.bmchild.model", source);
+		System.out.println("The generated pojo file is in:");
+		codeModel.build(new File("target"));
+		
 	}
 	
 
