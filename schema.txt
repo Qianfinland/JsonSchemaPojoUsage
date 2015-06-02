@@ -2,6 +2,24 @@
   "type" : "object",
   "id" : "urn:jsonschema:com:bmchild:model:SimplePojo",
   "properties" : {
+    "children" : {
+      "type" : "array",
+      "items" : {
+        "type" : "object",
+        "id" : "urn:jsonschema:com:bmchild:model:SimplePojoChild",
+        "properties" : {
+          "cName" : {
+            "type" : "string"
+          },
+          "id" : {
+            "type" : "integer"
+          },
+          "cDescription" : {
+            "type" : "string"
+          }
+        }
+      }
+    },
     "name" : {
       "type" : "string"
     },
